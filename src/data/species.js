@@ -6,7 +6,7 @@
  */
 
 /** @type {Record<string, Species>} */
-export const SPECIES = {
+const SPECIES = {
   /**
    * Sunflower is a tall annual plant known for its large head that tracks the sun.
    */
@@ -25,4 +25,4 @@ export const SPECIES = {
   },
 };
 
-export default SPECIES;
+module.exports = { SPECIES };
