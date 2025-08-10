@@ -7,6 +7,15 @@ describe('PlantGame actions', () => {
     const game = new PlantGame();
     game.act();
     expect(game.state.day).toBe(1);
+    expect(game.state.season).toBe('spring');
+    expect(game.state.weather).toBe('sunny');
+  });
+
+  test('consecutive acts toggle weather', () => {
+    const game = new PlantGame();
+    game.act();
+    game.act();
+    expect(game.state.weather).toBe('rainy');
   });
 
   test('start triggers periodic TICK actions', () => {
